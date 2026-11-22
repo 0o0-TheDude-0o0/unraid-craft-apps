@@ -155,7 +155,8 @@ COPY --link /root /
 ARG BUILD_REVISION=local
 LABEL maintainer="0o0-TheDude-0o0" \
       build_version="Unofficial ArtCraft ${BUILD_REVISION}" \
-      org.opencontainers.image.source="https://github.com/0o0-TheDude-0o0/docker-craft-apps" \
+      org.opencontainers.image.source="https://github.com/0o0-TheDude-0o0/unraid-craft-apps" \
+      org.opencontainers.image.documentation="https://github.com/0o0-TheDude-0o0/unraid-craft-apps/blob/main/README.md" \
       org.opencontainers.image.revision="${BUILD_REVISION}" \
       org.opencontainers.image.description="Unofficial x86-64 ArtCraft suite based on LinuxServer.io Craft Apps"
 

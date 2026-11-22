@@ -37,6 +37,18 @@ jobs:
           echo 'Publishing is only allowed from master.' >&2
           exit 1
 
+      - name: Require matching public source snapshot
+        if: ${{ inputs.publish && github.ref == 'refs/heads/master' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_revision="$(curl --fail --silent --show-error --location --retry 3 \
+            https://raw.githubusercontent.com/0o0-TheDude-0o0/unraid-craft-apps/main/SOURCE_COMMIT)"
+          if [[ "$source_revision" != "$GITHUB_SHA" ]]; then
+            echo "Public source snapshot does not match build revision $GITHUB_SHA" >&2
+            exit 1
+          fi
+
       - name: Free space on the hosted runner
         shell: bash
         run: |

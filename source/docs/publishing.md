@@ -20,7 +20,13 @@ verify that an unauthenticated pull works. The GitHub repository itself can
 remain private. GitHub states that changing a package to public cannot be
 reversed, so review the package and image details before that step.
 
+The public [Unraid template and source snapshot](https://github.com/0o0-TheDude-0o0/unraid-craft-apps)
+contains the packaging source under `source/`. Before publishing a new image,
+copy the exact build source there and update `SOURCE_COMMIT` to the private
+build revision. Keep the corresponding source available alongside every
+publicly downloadable image version.
+
 This project currently builds and checks only `linux/amd64`. ARM64 checksums
 in the existing lock files are preserved but are not updated by the release
-checker. An Unraid template and automatic publication after successful release
-checks are separate follow-up steps.
+checker. Automatic publication after successful release checks is a separate
+follow-up step.
