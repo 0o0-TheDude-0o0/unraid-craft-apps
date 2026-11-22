@@ -27,5 +27,12 @@ application packages come from the ArtCraft team. The packaging source license
 is in [`LICENSE`](LICENSE). The apps and third-party components retain their
 own licenses and notices.
 
+Published image versions and their corresponding packaging source:
+
+| Image tag | Build revision | Public source snapshot |
+| --- | --- | --- |
+| `sha-5058d437a027` | `5058d437a0279626538b009b81473708f957af07` | [`source/` at the matching public snapshot](https://github.com/0o0-TheDude-0o0/unraid-craft-apps/tree/d0644c9/source) |
+| `sha-d4288ac9567e` | `d4288ac9567ea2ddb3902702da0673f02cd9fa89` | [`source/` at the first public snapshot](https://github.com/0o0-TheDude-0o0/unraid-craft-apps/tree/8e16447/source) |
+
 Report issues with this image or template in this repository's Issues tab.
 For application bugs, use the relevant ArtCraft upstream repository.
