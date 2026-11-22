@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommunityApplications>
+  <Profile>Unofficial x86-64 ArtCraft All Apps image and Unraid template. The image combines all 17 ArtCraft desktop apps using LinuxServer.io's Selkies base. Packaging source is included in this repository.</Profile>
+  <Icon>https://raw.githubusercontent.com/0o0-TheDude-0o0/unraid-craft-apps/main/icon.svg</Icon>
+  <WebPage>https://github.com/0o0-TheDude-0o0/unraid-craft-apps</WebPage>
+</CommunityApplications>

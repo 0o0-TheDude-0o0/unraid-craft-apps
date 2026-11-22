@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir -p "${HOME}/Desktop"
+for APP in photocraft vectorcraft filmcraft lightcraft pdfcraft effectcraft anicraft designcraft figcraft texturecraft materialcraft soundcraft wordcraft deckcraft cadcraft gridcraft craft-anything; do
+  if [ ! -f "${HOME}/Desktop/ai.storyteller.${APP}.desktop" ]; then
+    cp "/usr/share/applications/ai.storyteller.${APP}.desktop" "${HOME}/Desktop/"
+  fi
+done
+if [ ! -f "${HOME}/Desktop/chromium.desktop" ]; then
+  cp /usr/share/applications/chromium.desktop "${HOME}/Desktop/"
+fi
+
+touch "${HOME}/.config/panel-reload"
+
+gio mime x-scheme-handler/http chromium.desktop
+gio mime x-scheme-handler/https chromium.desktop
+gio mime application/x-terminal-emulator foot.desktop

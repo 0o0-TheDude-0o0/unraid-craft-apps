@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>artcraft-all-apps</Name>
+  <Repository>ghcr.io/0o0-thedude-0o0/docker-craft-apps:latest</Repository>
+  <Registry>https://ghcr.io/0o0-thedude-0o0/docker-craft-apps</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Icon>https://raw.githubusercontent.com/0o0-TheDude-0o0/unraid-craft-apps/main/icon.svg</Icon>
+  <WebUI>https://[IP]:[PORT:3001]/</WebUI>
+  <Overview>Unofficial x86-64 container with all 17 ArtCraft creative apps in one browser desktop.</Overview>
+  <Description>Based on LinuxServer.io's Craft Apps and Selkies. Open the HTTPS desktop on port 3001 and accept its self-signed certificate. The desktop includes a terminal; keep it on a trusted local network unless you provide strong external authentication. This image is not maintained by LinuxServer.io or the ArtCraft team.</Description>
+  <Support>https://github.com/0o0-TheDude-0o0/unraid-craft-apps/issues</Support>
+  <Project>https://github.com/0o0-TheDude-0o0/unraid-craft-apps</Project>
+  <TemplateURL>https://raw.githubusercontent.com/0o0-TheDude-0o0/unraid-craft-apps/main/templates/artcraft-all-apps.xml</TemplateURL>
+  <ReadMe>https://raw.githubusercontent.com/0o0-TheDude-0o0/unraid-craft-apps/main/README.md</ReadMe>
+  <Category>Tools:Utilities</Category>
+  <ExtraSearchTerms>ArtCraft PhotoCraft VectorCraft FilmCraft LightCraft PdfCraft EffectCraft AniCraft DesignCraft FigCraft TextureCraft MaterialCraft SoundCraft WordCraft DeckCraft CADCraft GridCraft</ExtraSearchTerms>
+  <Requires>x86-64 host. Use a trusted local network or strong external authentication.</Requires>
+  <ExtraParams>--shm-size=1g</ExtraParams>
+  <Config Name="HTTPS desktop" Target="3001" Default="3001" Mode="tcp" Description="HTTPS port for the ArtCraft desktop." Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="App data" Target="/config" Default="/mnt/user/appdata/artcraft-all-apps" Mode="rw" Description="Persistent desktop files and settings." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Description="Unraid user ID for files in /config." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Description="Unraid group ID for files in /config." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="TZ" Target="TZ" Default="Etc/UTC" Description="Container time zone." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
